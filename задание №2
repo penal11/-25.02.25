@@ -1,0 +1,27 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+file_path = 'Excel.xlsx'  # Путь к файлу Excel
+df = pd.read_excel(file_path)
+
+
+print(df.head())  # Вывод первых строк для проверки
+
+
+plt.figure(figsize=(8, 6))  # Размер окна графика
+
+# Используем данные из DataFrame
+plt.plot(df['X'], df['Y'], marker='o', label='Зависимость задания от кода')
+
+# Настройка графика
+plt.title('2 задание ')
+plt.xlabel('Ось X')
+plt.ylabel('Ось Y')
+plt.legend()
+plt.grid(True)  # Включить сетку
+
+# Шаг 3: Отображаем график
+plt.show()
+
+
